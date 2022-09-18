@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://aframe.io/releases/1.3.0/aframe.min.js"></script>
+</head>
+
+<body>
+    <a-scene>
+        <a-entity light="type: directional; castShadow:true; color: #EEE; intensity:1;" position="5 10 8"></a-entity>
+        <a-entity light="type: ambient; color: #EEE; intensity:0.4;" position="5 10 8"></a-entity>
+        <a-entity position="0 0 5">
+            <a-camera></a-camera>
+        </a-entity>
+        <!-- <a-sky color="#ffffff"></a-sky> -->
+
+        <a-entity rotation="0 -45 0" animation="property:rotation; to:0 45 0; easing:linear; loop:true; dir:alternate; dur:2000">
+            <a-box position="0 1.51 0" depth="0.5" color="skyblue" shadow="cast: true">
+                <a-cylinder position="-0.375 -0.8 0" radius="0.125" height="0.8" color="orange" shadow="cast:true">
+                    <a-sphere position="0 -0.5 0" radius="0.25" color="red"></a-sphere>
+                </a-cylinder>
+                <a-cylinder position="0.375 -0.8 0" radius="0.125" height="0.8" color="orange" shadow="cast:true">
+                    <a-sphere position="0 -0.5 0" radius="0.25" color="red"></a-sphere>
+                </a-cylinder>
+
+                <a-entity rotation="20 0 0" position="0 0.5 0" animation="property:rotation; to:-30 0 0; easing:linear; loop:true; dir:alternate; dur:400;">
+                    <a-box position="0 0.05" height="0.2" depth="0.25" width="0.25" color="orange">
+                        <a-box position="0 0.4 0" width="0.6" height="0.6" depth="0.6" color="skyblue">
+                            <a-entity>
+                                <a-sphere color="white" position="-0.15 0.1 0.22" radius="0.125"></a-sphere>
+                                <a-sphere color="white" position="0.15 0.1 0.22" radius="0.125"></a-sphere>
+                            </a-entity>
+                            <a-entity position="-0.05 0 0" animation="property:position; to:0.05 0 0; easing:linear; dir:alternate; loop:true; dur:500;">
+                                <a-sphere color="black" position="-0.15 0.1 0.3" radius="0.05"></a-sphere>
+                                <a-sphere color="black" position="0.15 0.1 0.3" radius="0.05"></a-sphere>
+                            </a-entity>
+
+                            <a-entity position="0 0.25 0" rotation="0 0 45" animation="property:rotation; to:0 0 -45; easing:linear; dir:alternate; loop:true; dur:200">
+                                <a-cylinder position="0 0.25 0" radius="0.05" height="0.5" color="silver">
+                                    <a-sphere position="0 0.25 0" radius="0.1" color="red">
+
+                                    </a-sphere>
+                                </a-cylinder>
+                            </a-entity>
+
+                            <a-box position="0 -0.15 0.3" depth="0.05" width="0.4" height="0.01" metalness="1" roughness="0" color="black" animation="property:height; to: 0.2; easing:linear; dir:alternate; loop:true; dur: 300;"></a-box>
+                        </a-box>
+                    </a-box>
+                </a-entity>
+                
+                <a-entity position="0.6 0.3 0" rotation="0 0 -45" animation="property:rotation; to:0 0 70; easing:linear; dir:alternate; loop:true; dur:400;">
+                    <a-sphere radius="0.2" rotation="0 0 -30" color="red">
+                        <a-cylinder position="0.3 0 0" rotation="0 0 90" height="0.5" radius="0.125" color="orange">
+                            <a-sphere position="0 -0.3 0" radius="0.2" rotation="0 0 -100" color="red" animation="property:rotation; to:0 0 0; easing:linear; dir:alternate; loop:true; dur:400;">
+                                <a-cylinder position="0.3 0 0" rotation="0 0 90" height="0.5" radius="0.125" color="orange">
+                                    <a-sphere position="0 -0.3 0" radius="0.25" color="red"></a-sphere>
+                                </a-cylinder>
+                            </a-sphere>
+                        </a-cylinder>
+                    </a-sphere>
+                </a-entity>
+
+                <a-entity position="-0.6 0.3 0" rotation="0 0 45" animation="property:rotation; to:0 0 -70; easing:linear; dir:alternate; loop:true; dur:400;">
+                    <a-sphere radius="0.2" rotation="0 0 -150" color="red">
+                        <a-cylinder position="0.3 0 0" rotation="0 0 90" height="0.5" radius="0.125" color="orange">
+                            <a-sphere position="0 -0.3 0" radius="0.2" rotation="0 0 -80" color="red" animation="property:rotation; to:0 0 -180; easing:linear; dir:alternate; loop:true; dur:400;">
+                                <a-cylinder position="0.3 0 0" rotation="0 0 90" height="0.5" radius="0.125" color="orange">
+                                    <a-sphere position="0 -0.3 0" radius="0.25" color="red"></a-sphere>
+                                </a-cylinder>
+                            </a-sphere>
+                        </a-cylinder>
+                    </a-sphere>
+                </a-entity>
+
+                <a-entity>
+                    <a-box position="-0.25 0.25 0.25" depth="0.05" width="0.1" height="0.1" color="#833ab4" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:0;"></a-box>
+                    <a-box position="0 0.25 0.25" depth="0.05" width="0.1" height="0.1" color="#c22b65" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:125;"></a-box>
+                    <a-box position="0.25 0.25 0.25" depth="0.05" width="0.1" height="0.1" color="#fd1d1d" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:250;"></a-box>
+
+                    <a-box position="0.25 0 0.25" depth="0.05" width="0.1" height="0.1" color="#fc6932" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:375;"></a-box>
+                    
+                    <a-box position="0.25 -0.25 0.25" depth="0.05" width="0.1" height="0.1" color="#fcb045" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:500;"></a-box>
+                    <a-box position="0 -0.25 0.25" depth="0.05" width="0.1" height="0.1" color="#fd5e2f" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:625;"></a-box>
+                    <a-box position="-0.25 -0.25 0.25" depth="0.05" width="0.1" height="0.1" color="#fd1d1d" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:750;"></a-box>
+
+                    <a-box position="-0.25 0 0.25" depth="0.05" width="0.1" height="0.1" color="#c72a5f" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:-2; easing:linear; loop:true; dur:1000; delay:875;"></a-box>
+
+                    <a-box position="0 0 0.25" depth="0.05" width="0.2" height="0.2" color="white" shadow="recieve: false; cast: false;" opacity="1" animation="property:opacity; to:0; easing:linear; loop:true; dur:200; dir:alternate;"></a-box>
+                </a-entity>
+            </a-box>
+        </a-entity>
+
+        <a-plane rotation="-90 0 0" width="10" height="10" color="white" shadow="recieve: true"></a-plane>
+    </a-scene>
+</body>
+
+</html>
